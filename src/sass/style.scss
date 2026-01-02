@@ -1,36 +1,9 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-figure,
-p,
-ol,
-ul {
-	margin: 0;
-}
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/fontello.css";
 
-ol[role="list"],
-ul[role="list"] {
-	list-style: none;
-	padding-inline: 0;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-size: inherit;
-	font-weight: inherit;
-}
+@use "/src/sass/base/basic.scss";
 
-img {
-	display: block;
-	max-inline-size: 100%;
-}
 
-html {
-	font-family: "Inter", sans-serif;
-	scroll-behavior: smooth;
-}
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/promo.scss";
