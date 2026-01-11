@@ -1,0 +1,74 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.touch {
+    padding-top: 60px;
+
+    &__wrapper {
+        margin-top: 59px;
+    }
+
+    &__form {
+        display: block;
+        width: 340px;
+        height: 368px;
+        border: 1px solid black;
+    }
+
+    &__btn {
+        margin: 20px 0 0 0;
+    }
+
+    &__img {
+
+        &_big {
+            display: none;
+        }
+
+        &_small {
+            display: none;
+        }
+
+    }
+}
+
+@media screen and (min-width:768px) {
+    .touch {
+
+
+        &__wrapper {
+            position: relative;
+            margin-top: 45px;
+        }
+
+        &__img {
+            &_small {
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+        }
+
+
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .touch {
+        &__wrapper {
+            margin-top: 80px;
+        }
+
+        &__img {
+            &_big {
+                display: block;
+                padding-right: 20px;
+            }
+        }
+
+        &__col {
+            padding-left: 20px;
+        }
+    }
+}
