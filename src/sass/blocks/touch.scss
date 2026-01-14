@@ -3,12 +3,12 @@
 .touch {
     padding-top: 60px;
 
-    &__form {
-        max-width: 340px;
+    &__wrapper {
+        margin-top: 60px;
     }
 
-    &__wrapper {
-        margin-top: 59px;
+    &__img {
+        display: none;
     }
 
     &__fieldset {
@@ -19,40 +19,23 @@
 
     &__label {
         display: block;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 28px;
         color: $dark;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
 
         &:nth-child(2) {
             margin-top: 8px;
         }
     }
 
-    &__check-block {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-
-        a {
-            color: #A22DC6;
-            text-decoration: none;
-            padding-left: 2px;
-        }
-    }
-
-    &__checkbox {
-        margin-right: 15px;
-        width: 15px;
-        height: 15px;
-    }
-
     &__input {
         width: 100%;
         height: 48px;
-        border: 1px solid #e2e1e5;
-        border-radius: 2px;
         padding: 10px 15px;
+        color: $dark;
+        border-radius: 2px;
+        border: 1px solid #e2e1e5;
         background: #fff;
 
         &:focus {
@@ -69,9 +52,10 @@
     &__textarea {
         width: 100%;
         height: 132px;
-        border: 1px solid #e2e1e5;
-        border-radius: 2px;
         padding: 10px 15px;
+        color: $dark;
+        border-radius: 2px;
+        border: 1px solid #e2e1e5;
         background: #fff;
         resize: none;
 
@@ -86,73 +70,58 @@
         }
     }
 
-    &__btn {
-        margin: 20px 0 0 0;
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        a {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 2px;
+        }
     }
 
-    &__img {
+    &__checkbox {
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+    }
 
-        &_big {
-            display: none;
-            width: 550px;
-            height: 342px;
-            object-fit: cover;
-        }
+    &__btn {
+        margin-top: 20px;
+    }
 
-        &_small {
-            display: none;
-        }
-
+    &__decor {
+        display: none;
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .touch {
-        &__wrapper {
+        &__form {
             position: relative;
-            margin-top: 45px;
+            width: 300px;
             padding-left: 24px;
         }
 
-        &__form {
-
-
-            width: 300px;
+        &__decor {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
-
-        &__img {
-            &_small {
-                display: block;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
-
-        }
-
-
     }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
     .touch {
-        &__wrapper {
-            margin-top: 80px;
-            padding-left: 0;
-        }
-
         &__img {
-            &_big {
-                display: block;
-                width: 550px;
-                height: 342px;
-                object-fit: cover;
-                box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-            }
-        }
-
-        &__col {
-            padding-left: 20px;
+            display: block;
+            width: 550px;
+            height: 342px;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
         }
 
         &__input {
@@ -161,37 +130,41 @@
                 outline: 1px solid $dark;
             }
         }
+
+        &__form {
+            padding-left: 20px;
+        }
     }
 }
 
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 1920px) {
     .touch {
         padding-top: 100px;
 
-        &__fieldset {
-            display: flex;
-            gap: 45px;
+        &__img {
+            width: 100%;
+            height: 356px;
         }
 
         &__form {
             width: auto;
-            padding-left: 147px;
+            padding-left: 143px;
         }
 
-        &__img {
-            &_big {
-                padding-right: 0px;
-                width: 100%;
-            }
-
-            &_small {
-                right: 65px;
-            }
+        &__fieldset {
+            display: flex;
+            column-gap: 45px;
         }
 
-        label,
-        textarea {
+        &__label,
+        &__check-block,
+        &__input,
+        &__textarea {
             width: 300px;
+        }
+
+        &__decor {
+            right: 75px;
         }
     }
 }
