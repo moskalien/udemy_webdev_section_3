@@ -44,18 +44,12 @@
 
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     .activities {
         padding: 60px 0 0 0;
-
         &__col {
             padding: 0 10px;
         }
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .activities {
         &__wrapper {
             margin-top: 80px;
         }

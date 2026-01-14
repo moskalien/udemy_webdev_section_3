@@ -15,6 +15,17 @@
     width: 220px;
     height: 40px;
     font-size: 16px;
+
+    &:focus {
+        border: none;
+        color: $dark;
+        outline: 1px solid $Ceramic;
+    }
+
+    &:disabled {
+        border: 1px solid $ui-disabled;
+        color: $ui-disabled;
+    }
 }
 
 
@@ -30,6 +41,13 @@
             background: rgba(217, 217, 217, 0.1);
             color: $dark;
             border: none;
+        }
+    }
+
+    .btn-send {
+        &:hover {
+            border: 1px solid $Ceramic;
+            color: $Ceramic;
         }
     }
 }
