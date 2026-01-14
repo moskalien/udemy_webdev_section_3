@@ -111,6 +111,13 @@
         &__wrapper {
             position: relative;
             margin-top: 45px;
+            padding-left: 24px;
+        }
+
+        &__form {
+
+
+            width: 300px;
         }
 
         &__img {
@@ -131,6 +138,7 @@
     .touch {
         &__wrapper {
             margin-top: 80px;
+            padding-left: 0;
         }
 
         &__img {
@@ -167,21 +175,18 @@
 
         &__form {
             width: auto;
+            padding-left: 147px;
         }
 
         &__img {
             &_big {
                 padding-right: 0px;
+                width: 100%;
             }
 
             &_small {
                 right: 65px;
             }
-        }
-
-        &__col {
-            padding-left: 147px;
-
         }
 
         label,
