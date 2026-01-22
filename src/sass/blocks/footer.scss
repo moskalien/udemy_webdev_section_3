@@ -1,0 +1,205 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+    padding: 50px 0;
+    background-color: $dark;
+
+    &_spaced {
+        margin-top: 60px;
+    }
+
+    &__titles {
+        color: $Light;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-top: 40px;
+        color: $Light;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__form {
+        margin-top: 40px;
+    }
+
+
+
+    &__input {
+        width: 293px;
+        background-color: transparent;
+        border: none;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $ui-active;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $ui-active;
+
+        &::placeholder {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $ui-active;
+        }
+    }
+
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        color: $Light;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+
+        a {
+            margin-left: 3px;
+            text-decoration: none;
+            color: #a22dc6;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 15px;
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+}
+
+.footer {
+    &__navigation {
+        top: 0;
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 66px;
+    }
+
+    &__nav-block {
+        margin-top: 40px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $Light;
+    }
+
+    &__nav {
+        padding-top: 40px;
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            list-style-type: none;
+
+        }
+    }
+
+    &__link {
+        a {
+            color: $Light;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.footer {
+    &__social {
+        margin-top: 40px;
+
+        &-block {
+            display: flex;
+            margin-top: 40px;
+            list-style-type: none;
+            padding: 0;
+            font-size: 25px;
+            column-gap: 10px;
+
+            a {
+                display: block;
+                color: $Light;
+                text-decoration: none;
+                font-size: 24px;
+            }
+
+            span:before {
+                margin: 0px;
+            }
+        }
+    }
+
+
+}
+
+.footer__copyright {
+    margin: 40px 0 0 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: $Light;
+}
+
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__newsletter {
+            width: 100%;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__newsletter {
+            width: auto;
+        }
+
+        &__copyright {
+            margin-top: 50px;
+        }
+
+        &__social,
+        &__nav-block {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .footer {
+        padding: 80px 0 52px 0;
+
+        &_spaced {
+            margin-top: 100px;
+        }
+
+        &__copyright {
+            margin-top: 18px;
+        }
+    }
+}

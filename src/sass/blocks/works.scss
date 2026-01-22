@@ -2,6 +2,11 @@
 
 .works {
     padding-top: 60px;
+    padding-bottom: 35px;
+
+    &__wrapper {
+        position: relative;
+    }
 
     &__slider {
         margin-top: 40px;
@@ -50,6 +55,7 @@
             margin-top: 45px;
         }
     }
+
 }
 
 @media screen and (min-width:1200px) {
