@@ -1,6 +1,73 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .header {
+    &__menu {
+        padding: 50px 10px;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: $Light;
+        transition: transform 0.3s;
+        opacity: 0;
+
+        &_active {
+            transform: translateX(100%);
+            opacity: 1;
+
+        }
+
+        &-close {
+            width: 15px;
+            height: 15px;
+
+            span {
+                display: block;
+                width: 12px;
+                height: 1px;
+                background-color: $dark;
+
+                &:nth-child(1) {
+                    transform: translateY(8.4px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(7.4px) rotate(-45deg);
+                }
+            }
+        }
+
+        &-nav {
+            margin-top: 50px;
+            padding-left: 14px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+                padding: 0;
+                list-style-type: none;
+            }
+
+        }
+
+        &-link {
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: $dark;
+            }
+
+        }
+    }
+
+
+}
+
+.header {
     &__top {
         display: flex;
         justify-content: space-between;
@@ -33,6 +100,8 @@
     &__nav {
         display: none;
     }
+
+
 }
 
 .burger {
@@ -78,6 +147,10 @@
             font-style: normal;
             text-decoration: none;
         }
+
+        &__menu {
+            display: none;
+        }
     }
 
     .burger {
@@ -89,9 +162,10 @@
     .header {
         &__nav {
             margin-top: 36px;
-                ul {
+
+            ul {
                 gap: 60px;
-                }
+            }
         }
 
         &__logo {

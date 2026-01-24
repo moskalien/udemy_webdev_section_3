@@ -36,6 +36,11 @@
     color: $Light;
     outline: 1px solid $Light;
 
+    &:disabled {
+        border: 1px solid $ui-disabled;
+        color: $ui-disabled;
+    }
+
 }
 
 
