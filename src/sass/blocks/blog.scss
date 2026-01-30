@@ -1,0 +1,120 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.blog {
+    padding-top: 50px;
+
+    &__wrapper {
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+    }
+
+    &__card {
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        background-color: $Light;
+        border: 1px solid $dark;
+        display: block;
+
+    }
+
+    &__title {
+        margin-top: 60px;
+    }
+
+    &__data {
+        &-column {
+            display: flex;
+            gap: 25px;
+            flex-direction: column;
+            padding: 25px 25px 0 25px;
+        }
+    }
+
+    &__title-h3 {
+        text-align: left;
+    }
+
+    &__img {
+        max-inline-size: calc((min(100%, 340px)) + 2px);
+        transform: translateX(-1px) translateY(-1px);
+        object-fit: cover;
+        height: 240px;
+    }
+
+    &__text {
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark;
+        padding: 0 25px 25px 25px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .blog {
+
+        &__wrapper {
+            padding: 25px 25px 0 25px;
+            @include angle-decoration;
+        }
+
+        &__text {
+            margin-top: 15px;
+        }
+
+        &__data {
+            &-column {
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .blog {
+
+        &__wrapper {
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        &__card {
+            width: 520px;
+            min-height: 375px;
+        }
+
+        &__img {
+            max-inline-size: calc(100% + 2px);
+            height: 240px;
+            transform: translateX(-1px) translateY(-1px);
+
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        padding-top: 40px;
+
+        &__wrapper {
+            align-items: stretch;
+        }
+
+        &__title {
+            margin-top: 100px;
+        }
+
+        &__card {
+            width: 670px;
+        }
+
+        &__img {
+            height: 241px;
+        }
+    }
+}

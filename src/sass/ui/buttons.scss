@@ -15,17 +15,6 @@
     width: 220px;
     height: 40px;
     font-size: 16px;
-
-    &:focus {
-        border: none;
-        color: $dark;
-        outline: 1px solid $Ceramic;
-    }
-
-    &:disabled {
-        border: 1px solid $ui-disabled;
-        color: $ui-disabled;
-    }
 }
 
 .btn-submit {
@@ -36,12 +25,38 @@
     color: $Light;
     outline: 1px solid $Light;
 
+}
+
+.btn-read {
+    @include button;
+    width: min(42vw, 145px);
+    height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+.btn-send,
+.btn-read {
+    &:focus {
+        border: none;
+        color: $dark;
+        outline: 1px solid $Ceramic;
+    }
+}
+
+
+
+.btn-send,
+.btn-submit {
     &:disabled {
         border: 1px solid $ui-disabled;
         color: $ui-disabled;
     }
-
 }
+
+
 
 
 @media screen and (min-width:1200px) {
@@ -59,7 +74,8 @@
         }
     }
 
-    .btn-send {
+    .btn-send,
+    .btn-read {
         &:hover {
             border: 1px solid $Ceramic;
             color: $Ceramic;

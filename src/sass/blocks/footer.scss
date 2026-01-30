@@ -29,7 +29,8 @@
 
 
     &__input {
-        width: 293px;
+        // width: 293px;
+        width: min(293px, 81.3vw);
         background-color: transparent;
         border: none;
         padding-bottom: 15px;
