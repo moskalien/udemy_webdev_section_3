@@ -6,4 +6,50 @@
     &__title {
         margin-top: 60px;
     }
+
+    &__wrapper {
+        margin-top: 60px;
+        gap: 35px;
+    }
+
+    &__img img {
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark;
+    }
+
+
+}
+
+@media screen and (min-width:768px) {
+    .about {
+        &__img {
+            padding: 0px 60px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .about {
+        &__wrapper {
+            gap: 0px;
+        }
+
+        &__img {
+            padding: 0px 20px 0px 0px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .about {
+        &__text {
+            font-size: 20px;
+        }
+    }
 }
