@@ -56,7 +56,7 @@
 					</nav>
 				</div>
 				<div class="promo__wrapper">
-					<h1 class="titltalic promo__title">Make your dream come true <br>
+					<h1 class="title-h1-italic promo__title">Make your dream come true <br>
 						or decorate your home</h1>
 					<div class="promo__cta">
 						<img src="/src/img/promo/ceramic-vase.jpg" alt="vase" class="promo__img">
@@ -125,12 +125,15 @@
 							<label class="touch__label" for="question">Your question</label>
 							<textarea class="touch__textarea" name=" question" id="question"
 								placeholder="Question"></textarea>
+							<div class="error-message"></div>
 
 							<label class="touch__label touch__check-block" for="checkbox">
 								<input required class="touch__checkbox" type="checkbox" name="checkbox" id="checkbox">
 								I agree
 								with the
 								<a href="#">terms</a> </label>
+							<div class="checkbox-error-message"></div>
+
 							<button class="btn-send touch__btn">send request</button>
 						</form>
 
@@ -177,11 +180,16 @@
 						<form action="#" class="footer__form">
 							<input required class="footer__input" name="email" id="email" type="email"
 								placeholder="Enter your e-mail">
+							<div class="footer-email-error"></div>
+
+
 							<label class="footer__check-block" for="checkbox">
 								<input required class="footer__checkbox" type="checkbox" name="checkbox" id="checkbox">
 								I agree
 								with the
 								<a href="#">terms</a></label>
+							<div class="footer-checkbox-error"></div>
+
 							<button class="btn-submit footer__btn">submit</button>
 						</form>
 					</div>
