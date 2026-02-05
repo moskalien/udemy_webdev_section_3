@@ -166,6 +166,11 @@
                 outline: 1px solid $dark;
             }
         }
+
+        .animate__bounce {
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
     }
 }
 

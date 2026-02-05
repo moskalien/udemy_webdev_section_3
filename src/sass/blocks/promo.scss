@@ -1,3 +1,5 @@
+@use "/src/sass/base/animation.scss" as *;
+
 .promo {
     padding-top: 50px;
     position: relative;
@@ -65,6 +67,8 @@
             width: clamp(450px, 37.5vw, 640px);
             height: 633px;
             object-fit: cover;
+            animation-name: slide;
+            animation-duration: 3s;
         }
 
         &__title {
@@ -73,11 +77,18 @@
             padding-left: 570px;
             text-align: left;
         }
+
+        &__cta {
+            animation-name: slideIn;
+            animation-duration: 3s;
+        }
     }
-
-
-
 }
+
+
+
+
+
 
 @media screen and (min-width:1920px) {
     .promo {
