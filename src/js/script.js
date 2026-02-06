@@ -142,7 +142,7 @@ try {
   const footervalidator = new JustValidate(".footer__form");
 
   footervalidator
-    .addField('#email', [
+    .addField('#footer-email', [
       {
         rule: 'required',
       },
@@ -154,7 +154,7 @@ try {
         .querySelector('.footer__input')
         .parentElement.querySelector(".footer-email-error"),
     })
-    .addField('#checkbox', [
+    .addField('#footer-checkbox', [
       {
         rule: 'required',
       },
