@@ -6,6 +6,11 @@
     .just-validate-error-field {
         border: none;
         outline: 1px solid $ui-error;
+
+    }
+
+    .just-validate-error-label {
+        margin-top: 10px;
     }
 
     &__form {
